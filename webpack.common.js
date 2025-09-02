@@ -32,35 +32,10 @@ module.exports = {
         },
       ],
     }),
-    new WorkboxWebpackPlugin.GenerateSW({
+
+    new WorkboxWebpackPlugin.InjectManifest({
+      swSrc: path.resolve(__dirname, "src/sw.js"),
       swDest: "sw.js",
-      clientsClaim: true,
-      skipWaiting: true,
-      runtimeCaching: [
-        {
-          urlPattern: ({ url }) =>
-            url.href.startsWith("https://story-api.dicoding.dev/v1/"),
-          handler: "StaleWhileRevalidate",
-          options: {
-            cacheName: "story-api-cache",
-            cacheableResponse: {
-              statuses: [0, 200],
-            },
-          },
-        },
-        {
-          urlPattern: ({ url }) =>
-            url.href.startsWith("https://restaurant-api.dicoding.dev/images/"),
-          handler: "CacheFirst",
-          options: {
-            cacheName: "story-image-cache",
-            expiration: {
-              maxEntries: 60,
-              maxAgeSeconds: 30 * 24 * 60 * 60, // 30 hari
-            },
-          },
-        },
-      ],
     }),
   ],
 };
