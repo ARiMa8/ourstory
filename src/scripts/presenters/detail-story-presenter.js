@@ -16,6 +16,7 @@ class DetailStoryPresenter {
       this._story = story;
 
       this._view.showStory(story);
+
       await this._initializeFavoriteButton();
     } catch (error) {
       console.error(error);
@@ -39,6 +40,7 @@ class DetailStoryPresenter {
   }
 
   async _isStoryFavorited() {
+    if (!this._story) return false;
     const story = await this._favoriteDb.getStory(this._story.id);
     return !!story;
   }
