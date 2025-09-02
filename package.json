@@ -2,7 +2,7 @@
   "name": "arima-ourstory-app",
   "version": "1.0.0",
   "description": "OurStory with API and Maps Submission",
-  "homepage": "https://ARiMa8.github.io/ourstory",
+  "homepage": "https://arima8.github.io/ourstory",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "start-dev": "webpack serve --config webpack.dev.js",
