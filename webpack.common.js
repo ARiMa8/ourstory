@@ -11,6 +11,7 @@ module.exports = {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
+    publicPath: "",
   },
   module: {
     rules: [
@@ -32,7 +33,6 @@ module.exports = {
         },
       ],
     }),
-
     new WorkboxWebpackPlugin.InjectManifest({
       swSrc: path.resolve(__dirname, "src/sw.js"),
       swDest: "sw.js",

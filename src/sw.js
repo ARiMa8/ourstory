@@ -6,6 +6,13 @@ import { CacheableResponsePlugin } from "workbox-cacheable-response";
 precacheAndRoute(self.__WB_MANIFEST);
 
 registerRoute(
+  ({ request }) => request.mode === "navigate",
+  new StaleWhileRevalidate({
+    cacheName: "pages-cache",
+  })
+);
+
+registerRoute(
   ({ url }) => url.href.startsWith("https://story-api.dicoding.dev/v1/"),
   new StaleWhileRevalidate({
     cacheName: "story-api-cache",
@@ -18,10 +25,9 @@ registerRoute(
 );
 
 registerRoute(
-  ({ url }) =>
-    url.href.startsWith("https://restaurant-api.dicoding.dev/images/"),
+  ({ request }) => request.destination === "image",
   new CacheFirst({
-    cacheName: "story-image-cache",
+    cacheName: "image-cache",
     plugins: [
       new CacheableResponsePlugin({
         statuses: [0, 200],
