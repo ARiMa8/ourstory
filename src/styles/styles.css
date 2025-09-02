@@ -54,8 +54,8 @@ app-bar .app-bar {
   box-shadow: 0 2px 8px var(--shadow-color);
   position: sticky;
   top: 0;
-  z-index: 1000;
   width: 100%;
+  z-index: 1050;
 }
 
 app-bar .app-bar__brand h1 {
@@ -260,6 +260,14 @@ footer-bar footer {
 .story-card__content p {
   font-size: 1rem;
   line-height: 1.6;
+}
+
+.story-card__content .story-date {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: -5px;
+  margin-bottom: 10px;
 }
 
 .form-container {
@@ -594,6 +602,15 @@ form button[type="submit"]:hover {
   color: white;
 }
 
+.favorite {
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #e74c3c;
+  margin-top: 10px;
+}
+
 @keyframes slide-from-right {
   from {
     transform: translateX(30px);
@@ -631,6 +648,7 @@ form button[type="submit"]:hover {
     box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease-in-out;
     padding-top: 60px;
+    z-index: 1100;
   }
 
   app-bar .app-bar__navigation.open {

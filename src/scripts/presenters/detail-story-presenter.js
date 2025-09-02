@@ -1,11 +1,28 @@
 import { parseActivePathname } from "../routes/url-parser";
 
 class DetailStoryPresenter {
-  constructor({ view, model, story }) {
+  constructor({ view, storyApi, favoriteDb }) {
     this._view = view;
-    this._model = model;
-    this._story = story;
-    this._initializeFavoriteButton();
+    this._storyApi = storyApi;
+    this._favoriteDb = favoriteDb;
+    this._story = null;
+  }
+
+  async init() {
+    this._view.showLoading();
+    try {
+      const url = parseActivePathname();
+      const story = await this._storyApi.getStoryDetail(url.id);
+      this._story = story;
+
+      this._view.showStory(story);
+      await this._initializeFavoriteButton();
+    } catch (error) {
+      console.error(error);
+      this._view.showError("Gagal memuat detail cerita.");
+    } finally {
+      this._view.hideLoading();
+    }
   }
 
   async _initializeFavoriteButton() {
@@ -13,16 +30,16 @@ class DetailStoryPresenter {
     this._view.renderFavoriteButton(isFavorited);
     this._view.setupFavoriteButton(async () => {
       if (await this._isStoryFavorited()) {
-        this._model.deleteStory(this._story.id);
+        await this._favoriteDb.deleteStory(this._story.id);
       } else {
-        this._model.putStory(this._story);
+        await this._favoriteDb.putStory(this._story);
       }
-      this._initializeFavoriteButton();
+      await this._initializeFavoriteButton();
     });
   }
 
   async _isStoryFavorited() {
-    const story = await this._model.getStory(this._story.id);
+    const story = await this._favoriteDb.getStory(this._story.id);
     return !!story;
   }
 }
