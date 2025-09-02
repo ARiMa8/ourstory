@@ -1,0 +1,48 @@
+{
+  "name": "OurStory App",
+  "short_name": "OurStory",
+  "description": "A simple application to share and explore stories from around the world.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#f1f0e8",
+  "theme_color": "#adc4ce",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Tambah Cerita Baru",
+      "short_name": "Tambah Cerita",
+      "description": "Buka halaman untuk menambahkan cerita baru.",
+      "url": "/#/add-story",
+      "icons": [{ "src": "favicon.png", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Tampilan Desktop OurStory"
+    },
+    {
+      "src": "screenshots/screenshot-mobile.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Tampilan Mobile OurStory"
+    }
+  ]
+}
