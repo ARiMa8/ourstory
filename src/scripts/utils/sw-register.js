@@ -4,7 +4,7 @@ const swRegister = async () => {
     return;
   }
   try {
-    await navigator.serviceWorker.register("./sw.js");
+    await navigator.serviceWorker.register("/ourstory/sw.js");
     console.log("Service worker registered successfully");
   } catch (error) {
     console.log("Failed to register service worker", error);
