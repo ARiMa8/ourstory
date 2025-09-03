@@ -4,6 +4,7 @@ import "./components/app-bar";
 import "./components/footer-bar";
 import swRegister from "./utils/sw-register";
 import NotificationHelper from "./utils/notification-helper";
+import OfflineHandler from "./utils/offline-handler";
 
 import App from "./pages/app";
 
@@ -19,4 +20,5 @@ window.addEventListener("load", () => {
   app.renderPage();
   swRegister();
   NotificationHelper.init();
+  OfflineHandler.init();
 });

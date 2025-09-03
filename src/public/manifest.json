@@ -2,10 +2,11 @@
   "name": "OurStory App",
   "short_name": "OurStory",
   "description": "A simple application to share and explore stories from around the world.",
-  "start_url": "/index.html",
+  "start_url": "/ourstory/",
   "display": "standalone",
   "background_color": "#f1f0e8",
   "theme_color": "#adc4ce",
+  "scope": "/ourstory/",
   "icons": [
     {
       "src": "favicon.png",
@@ -25,7 +26,7 @@
       "name": "Tambah Cerita Baru",
       "short_name": "Tambah Cerita",
       "description": "Buka halaman untuk menambahkan cerita baru.",
-      "url": "/#/add-story",
+      "url": "/ourstory/#/add-story",
       "icons": [{ "src": "favicon.png", "sizes": "192x192" }]
     }
   ],
@@ -44,5 +45,8 @@
       "form_factor": "narrow",
       "label": "Tampilan Mobile OurStory"
     }
-  ]
+  ],
+  "categories": ["social", "lifestyle"],
+  "lang": "id",
+  "dir": "ltr"
 }
