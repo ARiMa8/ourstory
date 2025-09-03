@@ -37,7 +37,18 @@ registerRoute(
 );
 
 self.addEventListener("push", function (event) {
-  const body = event.data.json();
+  let body;
+  try {
+    body = event.data.json();
+  } catch (error) {
+    body = {
+      title: 'Push Notification',
+      options: {
+        body: event.data.text(),
+      },
+    };
+  }
+
   event.waitUntil(
     self.registration.showNotification(body.title, {
       body: body.options.body,
