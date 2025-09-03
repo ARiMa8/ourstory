@@ -13,13 +13,14 @@ class AppBar extends HTMLElement {
   render() {
     const isLoggedIn = SessionManager.isUserLoggedIn();
     this.innerHTML = `
-      <header class="app-bar">
+      <div class="app-bar">
         <div class="app-bar__brand"> <a href="#/"><h1>OurStory</h1></a> </div>
         <button class="app-bar__menu-button" id="menu-button" aria-label="Open Navigation Menu">☰</button>
         <nav class="app-bar__navigation" id="navigation-drawer">
           <ul>
             <li><a href="#/stories">Story</a></li>
-            <li><a href="#/favorites">Favorit</a></li> <li><a href="#/about">About</a></li>
+            <li><a href="#/favorites">Favorit</a></li>
+            <li><a href="#/about">About</a></li>
             ${
               isLoggedIn
                 ? `
@@ -34,7 +35,7 @@ class AppBar extends HTMLElement {
             }
           </ul>
         </nav>
-      </header>
+      </div>
     `;
     if (isLoggedIn) {
       this.querySelector("#logout-button").addEventListener(
