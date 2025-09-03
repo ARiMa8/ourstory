@@ -2,6 +2,7 @@
 
 ## This application is a final project developed for the "Belajar Pengembangan Web Intermediate" course at Dicoding Academy. It's a modern, installable, and offline-first Progressive Web App (PWA) for sharing and exploring stories with location data.
 
+
 ## ✨ Key Features
 - Full RESTful API Integration: The app interacts with the Dicoding Story API to perform CRUD (Create, Read) operations on stories. All stories are persisted on a remote server.
 - User Authentication: Includes a complete user flow with registration and login pages to manage stories securely.
@@ -14,11 +15,6 @@
 - Device Feature Integration: Users can add new stories by uploading a file or directly capturing a photo using their device's camera.
 - Modern Web Features: Implements smooth page transitions using the View Transitions API and allows users to subscribe to Push Notifications.
 - Accessibility: Built with accessibility in mind, including features like a skip-to-content link and proper semantic HTML.
-
-## ⚠️ Disclaimer
-This repository is the result of a final project submission for the **"Belajar Pengembangan Web Intermediate"** course at Dicoding Academy. Please use this code as a reference for learning purposes only.
-
-**Do not copy and paste this project for your own submission.** Plagiarism is strictly prohibited by Dicoding and will be detected.
 
 ## 🚀 Quick Start
 ### Clone the Repository:
@@ -74,6 +70,20 @@ Bash<br>
 ### Add Story Page
 <img width="1912" height="1207" alt="image" src="https://github.com/user-attachments/assets/6e96241b-b853-416e-9d17-e97e1700292a" />
 
+## ⭐ Final Result: 5 Stars (Maximum Rating)
+![WhatsApp Image 2025-09-04 at 00 51 22_fad9330e](https://github.com/user-attachments/assets/27672451-919f-4f3e-b8f4-ff199c4a1ab1)
+<img width="372" height="436" alt="image" src="https://github.com/user-attachments/assets/019c1990-96de-48cf-8dbd-b67e500658cf" />
+
+This project successfully passed all submission criteria, including mandatory and optional requirements, achieving the highest possible rating of 5 stars.
+
+**Reviewer's Note for Future Improvement:**
+While the application is functionally robust and architecturally sound, the reviewer suggested that the User Interface (UI) could be further enhanced to be more engaging and visually appealing. This serves as a great next step for future development.
+
 
 ## ⭐ Special Thanks
 A big thank you to Dicoding for providing the Story API and an excellent, challenging learning platform. This project was an invaluable experience, pushing me through multiple revisions to master complex concepts like PWA, Service Workers, and a strict MVP architecture.
+
+## ⚠️ Disclaimer
+This repository is the result of a final project submission for the **"Belajar Pengembangan Web Intermediate"** course at Dicoding Academy. Please use this code as a reference for learning purposes only.
+
+**Do not copy and paste this project for your own submission.** Plagiarism is strictly prohibited by Dicoding and will be detected.
